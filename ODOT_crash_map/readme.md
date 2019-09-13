@@ -3,10 +3,14 @@
 This is a dataset from the Oregon Department of Transporation that details all crashes reported in a given year. The data is very rich, with many interesting fields. For this project, I explored two visual analyses: 
 
 ### Notebooks:
-- **Crash rates vs day and time-of-day.** 
+- **[Crash rates vs day and time-of-day.](ODOT_crash_feature_analyses_vf.ipynb)** 
+
+
 ![fatalities by hour](./fatalities_by_hour.png)
 
-- **An interactive heat map** * showing crash densities throughout the regions that crashes were reported.
+- **[An interactive map showing a crash fatality density heatmap](ODOT_crash_heatmap_vf.ipynb)** * 
+
+
 ![crash map](./crash_map.png)
 
 
