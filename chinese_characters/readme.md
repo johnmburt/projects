@@ -12,6 +12,6 @@ An unlabelled holdout dataset was provided as a challenge to those who wanted to
 ## Projects:
 
 ### CNN based character code classifier.
-- [JMB_chinese_char_evolution_CNN_char_prediction_f.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/chinese_characters/MB_chinese_char_evolution_CNN_char_prediction_f.ipynb)
+- [JMB_chinese_char_evolution_CNN_char_prediction_f.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/chinese_characters/JMB_chinese_char_evolution_CNN_char_prediction_f.ipynb)
 
 ![model graph](./model_plot.png)
