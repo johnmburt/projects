@@ -11,10 +11,10 @@ This is a dataset from the Oregon Department of Transporation that details all c
 ![fatalities by hour](./fatalities_by_hour.png)
 
 ### Interactive Google map map with crash fatality density heatmap overlay.
-- [ODOT_crash_heatmap_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/ODOT_crash_heatmap_vf.ipynb)** * 
+- [ODOT_crash_heatmap_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/ODOT_crash_map/ODOT_crash_heatmap_vf.ipynb) * 
 
 
 ![crash map](./crash_map.png)
 
 
-*To see the heatmap, you will need to run the notebook.
+*you will need to run the notebook to see the interactive map, .
