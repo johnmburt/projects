@@ -1,5 +1,7 @@
 # Music clip dataset for genre ID and other applications
 
+![Harmonic decomposition figure](./harmonic_decomp.png)
+
 The data for this project is from ["FMA: A Dataset For Music Analysis"](https://github.com/mdeff/fma). That dataset is a dump of sound clips and associated metadata from the Free Music Archive (FMA), an interactive library of high-quality, legal audio downloads. 
 
 
