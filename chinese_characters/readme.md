@@ -9,6 +9,8 @@ The Chinese character data used in this notebook was provided to participants in
 
 An unlabelled holdout dataset was provided as a challenge to those who wanted to build a classifier to predict their character code and/or era.
 
+- The data used in these notebooks is too large to post on github: please contact me if you would like to have it.
+
 
 ## Projects:
 
