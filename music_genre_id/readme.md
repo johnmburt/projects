@@ -8,6 +8,8 @@ The data for this project is from ["FMA: A Dataset For Music Analysis"](https://
 For the meetup series, the music data was reduced further to a "warmup set" of 4000 samples each of folk and hip-hop music. This code uses the warmup set, but is also tooled to use the original music clip dataset, which is much larger and has more genre categories.
 
 
+- The data used in these notebooks is too large to post on github: please contact me if you would like to have it.
+
 ## Projects:
 
 ### Audio feature visualization
