@@ -7,11 +7,13 @@ Most of these projects were created during sessions for the Portland Data Scienc
 
 ## The projects:
 
-- **[Chinese characters:](chinese_characters)** 
+- **[Chinese characters:](./chinese_characters)** Visualization, CNN character image classifier model.
 
-- **[Music genre identification](./music_genre_id):** 
+- **[Interactive weather event map:](./NOAA_weather_events)** An interactive map of historical weather events with UI components, coded with bokeh.
 
-- **[ODOT crash data:](./ODOT_crash_map)** 
+- **[Music genre identification](./music_genre_id):** Audio frequency analysis (FFT), visualization, feature engineering, XGBoost music genre classifier model
+
+- **[ODOT crash data:](./ODOT_crash_map)** Data visualization, Google maps heat map overlay of traffic fatality density.
 
 
 
