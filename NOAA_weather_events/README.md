@@ -23,5 +23,5 @@ The visualization was generated using the interactive graphing package bokeh.
 
 ![NOAA weather map](./weather_event_map.png)
 
-### Map zoomed in and date selected to show the 4/27/2011 tornado outbreak.
+### Map zoomed in and date selected to show the 4/27/2011 tornado "Super Outbreak".
 ![NOAA weather map](./weather_event_map_04-27-11_outbreak.png)
