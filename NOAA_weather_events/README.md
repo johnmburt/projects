@@ -4,4 +4,6 @@ My goal for this project was to create an interactive map plot allowing users to
 
 The visualization was generated using the interactive graphing package bokeh.
 
-- [ODOT_crash_feature_analyses_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/NOAA_weather_events/weather_map_bokeh_googlemaps_app_vf.ipynb)
+- [NOAA_weather_events/weather_map_bokeh_googlemaps_app_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/NOAA_weather_events/weather_map_bokeh_googlemaps_app_vf.ipynb)
+
+![NOAA weather map](./weather_event_map.png)
