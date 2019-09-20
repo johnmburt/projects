@@ -2,6 +2,9 @@
 
 This is a dataset from the Oregon Department of Transporation that details all crashes reported in a given year. The data is very rich, with many interesting fields. For this project, I explored two visual analyses: 
 
+- The data used in these notebooks is too large to post on github: please contact me if you would like to have it.
+
+
 ## Projects:
 
 ### Crash rates vs time-of-day and weekday.
