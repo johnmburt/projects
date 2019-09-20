@@ -2,7 +2,7 @@
 
 For our April 2018 Applied Data Science meetup series, member Johnathan Mackrory prepared a dataset from NOAA historical weather event data:
 
-    This looks at the StormEvent data. The data starts in 1950, and runs till today. As discussed on the webpage(https://www.ncdc.noaa.gov/stormevents/details.jsp), the amount of information tracked has changed over time. In the 50s only tornados were tracked, and was expanded to thunderstorms and hail in the 60s. The full panoply of events only started being collected in 1996. So around 20 years of "full" coverage.
+> This looks at the StormEvent data. The data starts in 1950, and runs till today. As discussed on the webpage(https://www.ncdc.noaa.gov/stormevents/details.jsp), the amount of information tracked has changed over time. In the 50s only tornados were tracked, and was expanded to thunderstorms and hail in the 60s. The full panoply of events only started being collected in 1996. So around 20 years of "full" coverage.
 
 
 # Projects:
