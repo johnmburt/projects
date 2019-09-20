@@ -5,6 +5,9 @@ For our April 2018 Applied Data Science meetup series, member Johnathan Mackrory
 > This looks at the StormEvent data. The data starts in 1950, and runs till today. As discussed on the webpage(https://www.ncdc.noaa.gov/stormevents/details.jsp), the amount of information tracked has changed over time. In the 50s only tornados were tracked, and was expanded to thunderstorms and hail in the 60s. The full panoply of events only started being collected in 1996. So around 20 years of "full" coverage.
 
 
+
+- The data used in these notebooks runs about 232 MB. [I've provided a zipped version on my project github page](https://github.com/johnmburt/projects/tree/master/NOAA_weather_events/detail_trim1.zip). To use it, just unzip the data into the same folder as this notebook.
+
 # Projects:
 
 ## Graphing the total yearly cost of weather events from 1950 to 2017
