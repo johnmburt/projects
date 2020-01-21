@@ -7,7 +7,7 @@ I chose to examine what factors in residential life, appliances, home constructi
 ## Projects:
 
 ### Using trained XGBoost classifier feature importances to examine the most important features predicting economic hardship.
-- [ODOT_crash_feature_analyses_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/residential_energy_use/RECS_feature_importances_XGB_vf.ipynb)
+- [RECS_feature_importances_XGB_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/residential_energy_use/RECS_feature_importances_XGB_vf.ipynb)
 
 
 ![feature importances](./feature_importances.png)
