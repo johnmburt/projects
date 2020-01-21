@@ -15,5 +15,7 @@ Most of these projects were created during sessions for the Portland Data Scienc
 
 - **[ODOT crash data:](./ODOT_crash_map)** Data visualization, Google maps heat map overlay of traffic fatality density.
 
+- **[Residential energy use survey data:](./residential_energy_use)** EDA looking at what demographic and house features predict economic hardship.
+
 
 
