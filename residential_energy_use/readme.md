@@ -1,23 +1,14 @@
-# ODOT 2003 - 2015 crash data
+# Residential Energy Consumption Survey (RECS)
 
-This is a dataset from the Oregon Department of Transporation that details all crashes reported in a given year. The data is very rich, with many interesting fields. For this project, I explored two visual analyses: 
+The Residential Energy Consumption Survey was conducted in 2017 by the U.S. Energy Information Administration (EIA). The survey asked an enormous number of questions about energy consumption, building features, appliances used, and economic and other demographic information about the home occupants.
 
-- The data used in these notebooks is too large to post on github: please contact me if you would like to have it.
-
+I chose to examine what factors in residential life, appliances, home construction and occupant demographics are associated with financial hardship? Knowing what factors predict poverty can help agencies identify people who may need extra help. Similarly, struggling people may be better helped by targeted upgrade assistance for obsolete appliances they're likely to own.
 
 ## Projects:
 
-### Crash rates vs time-of-day and weekday.
-- [ODOT_crash_feature_analyses_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/ODOT_crash_map/ODOT_crash_feature_analyses_vf.ipynb)
+### Using trained XGBoost classifier feature importances to examine the most important features predicting economic hardship.
+- [ODOT_crash_feature_analyses_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/residential_energy_use/RECS_feature_importances_XGB_vf.ipynb)
 
 
-![fatalities by hour](./fatalities_by_hour.png)
+![feature importances](./feature_importances.png)
 
-### Interactive Google map with crash fatality density heatmap overlay.
-- [ODOT_crash_heatmap_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/ODOT_crash_map/ODOT_crash_heatmap_vf.ipynb) * 
-
-
-![crash map](./crash_map.png)
-
-
-*you will need to run the notebook to see the interactive map, .
