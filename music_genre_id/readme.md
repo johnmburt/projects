@@ -16,7 +16,7 @@ For the meetup series, the music data was reduced further to a "warmup set" of 4
 
 Using the librosa audio analysis package, I visualized music clips. The goal was to find a set of features that contained enough information to identify what genre a song clip belonged to. I reasonsed that harmonic and tempo and beat information would be a good place to start.
 
-- [music_genre_id/music_genre_id_visualize_features_vf.ipynb](http://nbviewer.jupyter.org/github/johnmburt/projects/blob/master/music_genre_id/music_genre_id_visualize_features_vf.ipynb) 
+- [music_genre_id/music_genre_id_visualize_features_vf.ipynb](https://github.com/johnmburt/projects/blob/master/music_genre_id/music_genre_id_visualize_features_vf.ipynb) 
 
 ### Classifier feature generation
 
