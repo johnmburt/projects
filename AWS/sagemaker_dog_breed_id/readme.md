@@ -8,6 +8,20 @@
 
 For this project, the task was to create and train an image classifier using Amazon SageMaker, then deploy a classifier instance as a microservice via the AWS API Gateway. I chose to make a dog breed classifier using a set of images made available by Stanford University. 
 
+### TLDR:
+
+- Training the model was a fairly simple procedure, though a bit fussy. Hyperparameter tuning was more complicated, and was costly. 
+
+- The classifier performed very well overall, with most classes at > 80% recall.
+
+- Low performing classes appeared to have breed labelling errors (Eskimo Dog), were the result of the same breed split into multiple size classes (Poodle) or were different breeds that look very similar (Lhasa Apso, Maltese Dog, Shi Tzu).
+
+- To improve model performance, I would:
+  - Curate the training images, making sure breed ID was accurate and images were actually dogs (some were stuffed animals).
+  - Combine breed size categories into one class.
+  - Consider adding a size estimate feature (say, wither height).
+  - Use image segmentation or manual annotation to define the image region containing the dog, then pass those regions to the model for training..
+
 ### Dataset:
 The [Stanford Dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) contains images of 120 breeds of dogs from around the world. This dataset has been built using images and annotation from ImageNet for the task of fine-grained image categorization. Contents of this dataset (120 categories, 20580 images).
 
@@ -53,22 +67,21 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 
 
 #### [Generate LST files for SageMaker model training and validation](dog_breed_id_test_API_manual.ipynb)
-
 - This notebook generates the LST files necessary to train and test the model using SageMaker explorer. LST files describe the samples to use for training and testing the model. These files are uploaded to the S3 bucket folder that contains the train/test images and are used in the training job setup.
 
 
 #### [Get sample info on a generated LST file set](dog_breed_classifier_get_LST_info.ipynb)
-
 - This notebook can be used to help set up hyperparams for a Sagemaker training job. The model will want to know number of clases, and (max) number of samples (120 categories, 20580 images).
 
 
-#### [Test the API by sending a dog image](dog_breed_id_test_API_manual.ipynb)
+#### [The Lambda function](dog_breed_id_lambda_function.ipynb)
+- This is the lambda function used by the microservice to pass received images via API posts to the model endpoint for inference. This Lambda was modified from the one presented in class to allow batches of images to be passed in one post. 
 
+#### [Test the API by sending a dog image](dog_breed_id_test_API_manual.ipynb)
 - Test the trained model instance, via an AWS Gateway API call. This notebook lets you select a local image file, prepares the image data, passes it to the model for inference, then displayes results.
 
 
 #### [Analyze classifier performance via the API](dog_breed_id_test_API_valset.ipynb)
-
 - This notebook examines the trained model performance in more detail. The model has 83% validation accuracy overall, but is that uniform, or are there some classes that perform better and other worse? 
 
 
