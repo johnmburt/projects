@@ -49,7 +49,7 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 - The API created had one resource, 'classify'. A POST method was attached, with pointed to the Lambda. 
 - The Lambda function was modified to allow posting batches of multiple images.
 
-##Project notebooks:
+## Project notebooks:
 
 
 #### [Generate LST files for SageMaker model training and validation](dog_breed_id_test_API_manual.ipynb)
