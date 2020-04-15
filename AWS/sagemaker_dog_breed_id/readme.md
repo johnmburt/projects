@@ -71,7 +71,7 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 
 
 #### [Get sample info on a generated LST file set](dog_breed_classifier_get_LST_info.ipynb)
-- This notebook can be used to help set up hyperparams for a Sagemaker training job. The model will want to know number of clases, and (max) number of samples (120 categories, 20580 images).
+- This notebook can be used to help set up hyperparams for a Sagemaker training job. The model will want to know number of classes, and max number of samples in the training set.
 
 
 #### [The Lambda function](dog_breed_id_lambda_function.ipynb)
