@@ -11,6 +11,10 @@ Most of these projects were created during sessions for the Portland Data Scienc
 
 - **[Dog breed identification from images](./AWS/sagemaker_dog_breed_id)**  Training and deploying an AWS SageMaker image-classifier microservice to identify a dog's breed from a picture. 
 
+- **[A Reddit troll rapid detection and warning tool](https://github.com/johnmburt/springboard/tree/master/capstone_1)** Using NLP sentiment analysis, I developed and tested four ML models to detect toxic comments on Reddit. Web scraping, data munging, EDA, feature engineering, Multinomial Naive Bayes, Random Forest, XGBoost, Recurrent Neural Network (RNN).
+
+- **[Building a Board Game Recommendation Engine](https://github.com/johnmburt/springboard/tree/master/capstone_2)**  I designed a board game recommender system that asks a user for a list of games that they already like, and then recommends games based on their game preferences. The system was trained using ratings data from the BoardGameGeek website, and I tested three model variations. After tuning and selecting the best recommender model, I deployed it as a working web app using a bokeh web server.
+
 - **[Chinese characters:](./chinese_characters)** Visualization, CNN character image classifier model.
 
 - **[Interactive weather event map:](./NOAA_weather_events)** An interactive map of historical weather events with UI components, coded with bokeh.
