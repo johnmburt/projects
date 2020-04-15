@@ -3,11 +3,11 @@
 
 ### Feb 2020 PDSG Applied Data Science Meetup series<br>John Burt
 
-Session details
+#### Session details
 
 For February’s four session meetup series we’ll be working with long term hydrophone recordings from University of Hawaii's Aloha Cabled Observatory (ACO - http://aco-ssds.soest.hawaii.edu), located at a depth of 4728m off Oahu. The recordings span a year and contain many acoustic events: wave movements, the sound of rain, ship noise, possible bomb noises, geologic activity and whale calls and songs. There is a wide range of project topics to explore: identifying and counting acoustic events such as whale calls, measuring daily or seasonal noise trends, measuring wave hydrodynamics, etc.
 
-Notebooks in this project folder:
+#### Notebooks in this project folder:
 
 [EDA for whale example clips](ACO_whalesong_detector_target_sound_EDA_Vf.ipynb)
 - For the whale song detector, I needed to prepare a set of clean song examples to train my classifier with. For this I clipped several hundred examples of humpback whale song from WHOI Watson library recordings that I downloaded. The clips are of individual song notes and range from ~ 1 sec to 8 sec long. I analyzed the details of these vocalizations, and found that there are three types of notes that whales produce, distinguishable by frequency range and other details.
