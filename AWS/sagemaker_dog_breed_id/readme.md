@@ -78,11 +78,11 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 - This is the lambda function used by the microservice to pass received images via API posts to the model endpoint for inference. This Lambda was modified from the one presented in class to allow batches of images to be passed in one post. 
 
 #### [Test the API by sending a dog image](dog_breed_id_test_API_manual.ipynb)
-- Test the trained model instance, via an AWS Gateway API call. This notebook lets you select a local image file, prepares the image data, passes it to the model for inference, then displayes results.
+- Test the trained model instance, via an AWS Gateway API call. This notebook lets you select a local image file, prepares the image data, passes it to the model for inference, then displays results.
 
 
 #### [Analyze classifier performance via the API](dog_breed_id_test_API_valset.ipynb)
-- This notebook examines the trained model performance in more detail. The model has 83% validation accuracy overall, but is that uniform, or are there some classes that perform better and other worse? 
+- This notebook examines the trained model performance in more detail. The model has 83% validation accuracy overall, but is that uniform, or are there some classes that perform better and others worse? 
 
 
 
