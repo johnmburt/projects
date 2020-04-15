@@ -7,6 +7,10 @@ Most of these projects were created during sessions for the Portland Data Scienc
 
 ## The projects:
 
+- **[Detecting Humpback Whale song in hydrophone recordings:](./ACO_whale_detector)** Audio analysis, signal processing, cluster analysis, sound classificaton using CNN classifier model.
+
+- **[Dog breed identification from images](./AWS/sagemaker_dog_breed_id)**  Training and deploying an AWS SageMaker image-classifier microservice to identify a dog's breed from a picture. 
+
 - **[Chinese characters:](./chinese_characters)** Visualization, CNN character image classifier model.
 
 - **[Interactive weather event map:](./NOAA_weather_events)** An interactive map of historical weather events with UI components, coded with bokeh.
