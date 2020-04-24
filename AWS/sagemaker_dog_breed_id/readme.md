@@ -33,15 +33,8 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 |lr_scheduler_factor|0.1| | | |
 
 
-
-### Microservice setup
-- After the job trained, I created a model instance.
-- From the model instance, an endpoint was created.
-- A lambda was created to process POST data from the Gateway API. The Lambda used an environment variable to specify the model endpoint.
-- The API created had one resource, 'classify'. A POST method was attached, with pointed to the Lambda. 
-- The Lambda function was modified to allow posting batches of multiple images.
-
-### Other training details:
+### Training details:
+- The model training job involved specifying the model hyperparameters and filling in details about the train and test sets.
 - The dog breed images used for training the model were stored in a subfolder on an S3 bucket. 
 - I needed to specify an additional volume size of 70 GB.
 - Instance type was ml.p2.xlarge, with 2 instances.
@@ -54,11 +47,10 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 
 ### Microservice setup
 - Everything was done using the AWS Management Console.
-- The model training job involved specifying the model hyperparameters and filling in details about the train and test sets.
-- After the job trained successfully, I created a model instance.
+- After the job trained, I created a model instance.
 - From the model instance, an endpoint was created. **NOTE:** you're charged for running endpoints so delete them when not in use.
-- A Lambda function was created to process data sent to the Gateway API. The Lambda used an environment variable to specify the model endpoint.
-- The API created had one resource, 'classify'. A POST method was attached, which pointed to the Lambda. 
+- A lambda was created to process POST data from the Gateway API. The Lambda used an environment variable to specify the model endpoint.
+- The API created had one resource, 'classify'. A POST method was attached, with pointed to the Lambda. 
 - The Lambda function was modified to allow posting batches of multiple images.
 
 
