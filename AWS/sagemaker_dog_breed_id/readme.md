@@ -8,20 +8,6 @@
 
 For this project, the task was to create and train an image classifier using Amazon SageMaker, then deploy a classifier instance as a microservice via the AWS API Gateway. I chose to make a dog breed classifier using a set of images made available by Stanford University. 
 
-### Results summary:
-
-- Training the model was a fairly simple procedure, though a bit fussy. Hyperparameter tuning was more complicated, and was costly. 
-
-- The classifier performed very well overall, with most classes at > 80% recall.
-
-- Low performing classes appeared to have breed labelling errors (Eskimo Dog), were the result of the same breed split into multiple size classes (Poodle) or were different breeds that look very similar (Lhasa Apso, Maltese Dog, Shi Tzu).
-
-- To improve model performance, I would:
-  - Curate the training images, making sure breed ID was accurate and images were actually dogs (some were stuffed animals).
-  - Combine breed size categories into one class.
-  - Consider adding a size estimate feature (say, wither height).
-  - Use image segmentation or manual annotation to define the image region containing the dog, then pass those regions to the model for training..
-
 ### Dataset:
 The [Stanford Dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) contains images of 120 breeds of dogs from around the world. This dataset has been built using images and annotation from ImageNet for the task of fine-grained image categorization. Contents of this dataset contained 120 breed categories and 20580 images.
 
@@ -47,15 +33,8 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 |lr_scheduler_factor|0.1| | | |
 
 
-
-### Microservice setup
-- After the job trained, I created a model instance.
-- From the model instance, an endpoint was created.
-- A lambda was created to process POST data from the Gateway API. The Lambda used an environment variable to specify the model endpoint.
-- The API created had one resource, 'classify'. A POST method was attached, with pointed to the Lambda. 
-- The Lambda function was modified to allow posting batches of multiple images.
-
-### Other training details:
+### Training details:
+- The model training job involved specifying the model hyperparameters and filling in details about the train and test sets.
 - The dog breed images used for training the model were stored in a subfolder on an S3 bucket. 
 - I needed to specify an additional volume size of 70 GB.
 - Instance type was ml.p2.xlarge, with 2 instances.
@@ -68,12 +47,27 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 
 ### Microservice setup
 - Everything was done using the AWS Management Console.
-- The model training job involved specifying the model hyperparameters and filling in details about the train and test sets.
-- After the job trained successfully, I created a model instance.
+- After the job trained, I created a model instance.
 - From the model instance, an endpoint was created. **NOTE:** you're charged for running endpoints so delete them when not in use.
-- A Lambda function was created to process data sent to the Gateway API. The Lambda used an environment variable to specify the model endpoint.
-- The API created had one resource, 'classify'. A POST method was attached, which pointed to the Lambda. 
+- A lambda was created to process POST data from the Gateway API. The Lambda used an environment variable to specify the model endpoint.
+- The API created had one resource, 'classify'. A POST method was attached, with pointed to the Lambda. 
 - The Lambda function was modified to allow posting batches of multiple images.
+
+
+## Results summary:
+
+- Training the model was a fairly simple procedure, though a bit fussy. Hyperparameter tuning was more complicated, and was expensive, since every training run cost money to complete. It helped to tune with a simpler task (in this case, classify only 10 breeds rather than the full 120), which reduced training time.
+
+- The classifier performed very well overall, with most classes at > 80% recall.
+
+- Low performing classes appeared to have breed labelling errors (Eskimo Dog), were the result of the same breed split into multiple size classes (Poodle) or were different breeds that look very similar (Lhasa Apso, Maltese Dog, Shi Tzu).
+
+- To improve model performance, I would:
+  - Curate the training images, making sure breed ID was accurate and images were actually dogs (some were stuffed animals).
+  - Combine breed size categories into one class.
+  - Consider adding a size estimate feature (say, wither height).
+  - Use image segmentation or manual annotation to define the image region containing the dog, then pass those regions to the model for training..
+
 
 ## Project notebooks:
 
