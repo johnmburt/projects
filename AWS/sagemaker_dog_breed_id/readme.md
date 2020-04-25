@@ -73,27 +73,16 @@ The model is a standard SageMaker image-classifier, which is a ResNet deep learn
 
 
 #### [Generate LST files for SageMaker model training and validation](dog_breed_id_test_API_manual.ipynb)
-- This notebook generates the LST files necessary to train and test the model using SageMaker explorer. LST files describe the samples to use for training and testing the model. These files are uploaded to the S3 bucket folder that contains the train/test images and are used in the training job setup.
+- Generates the LST files necessary to train and test the model using SageMaker explorer. LST files describe the samples to use for training and testing the model. These files are uploaded to the S3 bucket folder that contains the train/test images and are used in the training job setup. This script allows you to specify a subset of classes to train (for model tuning), or all classes (final model training).
 
 #### [Get sample info on a generated LST file set](dog_breed_classifier_get_LST_info.ipynb)
-- This notebook can be used to help set up hyperparams for a Sagemaker training job. The model will want to know number of classes, and max number of samples in the training set.
+- This notebook shows how to read a LST file and print details about the classes. It can be used to get info for setting up hyperparams for a Sagemaker training job. Particularly the model definition will want to know number of classes and max number of samples in the training set.
 
 #### [The Lambda function](dog_breed_id_lambda_function.ipynb)
-- This is the lambda function used by the microservice to pass received images via API posts to the model endpoint for inference. This Lambda was modified from the one presented in class to allow batches of images to be passed in one post. 
+- This is the function used by the Lambda service to pass images received via the API to the model endpoint for inference. You would paste this script into the Lambda during setup. This code was modified from the one presented in class to allow batches of images to be passed in one API call. 
 
 #### [Test the API by sending a dog image](dog_breed_id_test_API_manual.ipynb)
-- Test the trained model instance, via an AWS Gateway API call. This notebook lets you select a local image file, prepares the image data, passes it to the model for inference, then displays results.
-
+- Manually test the trained model instance, via an AWS Gateway API call. This notebook lets you select a local image file, prepares the image data, passes it to the model for inference, then displays results.
 
 #### [Analyze classifier performance via the API](dog_breed_id_test_API_valset.ipynb)
-- This notebook examines the trained model performance in more detail. The model has 83% validation accuracy overall, but is that uniform, or are there some classes that perform better and others worse? 
-
-
-
-
-
-
-
-
-
-
+- Analyze the trained model performance in more detail by evaluating performance of a the test image set across classes. The model has 83% validation accuracy overall, but is that uniform, or are there some classes that perform better and others worse? I did find several "problem" classes in this analysis.
