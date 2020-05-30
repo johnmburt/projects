@@ -7,7 +7,7 @@
 
 ![Dog mosaic](https://github.com/johnmburt/johnmburt.github.io/blob/master/images/projects/dog_mosaic.png)
 
-### NOTE: [Detailed instructions for training and microservice setup at the end of this doc](# AWS SageMaker training and microservice API setup details) 
+**NOTE:** [Detailed instructions for training and microservice setup at the end of this doc](#-aws-sagemaker-training-and-microservice-api-setup-details) 
 
 
 Imagine you’re an app developer, and you want to make a mobile app that tells users the breed of a dog just by pointing their phone at it and taking a picture. This seems like a pretty cool idea, and it could be applied to any number of other things people might want to identify like birds, flowers, cars, etc. The app would need a classifier to predict dog breed from an image, and the best models for that are Deep Learning neural networks like ResNet. But DL models are large and processing intensive, so you should host your dog breed classifier in the cloud where the mobile app can access it via an API. 
