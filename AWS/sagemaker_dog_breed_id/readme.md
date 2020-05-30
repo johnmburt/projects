@@ -7,6 +7,9 @@
 
 ![Dog mosaic](https://github.com/johnmburt/johnmburt.github.io/blob/master/images/projects/dog_mosaic.png)
 
+### NOTE: [Detailed instructions for training and microservice setup at the end of this doc](# AWS SageMaker training and microservice API setup details) 
+
+
 Imagine you’re an app developer, and you want to make a mobile app that tells users the breed of a dog just by pointing their phone at it and taking a picture. This seems like a pretty cool idea, and it could be applied to any number of other things people might want to identify like birds, flowers, cars, etc. The app would need a classifier to predict dog breed from an image, and the best models for that are Deep Learning neural networks like ResNet. But DL models are large and processing intensive, so you should host your dog breed classifier in the cloud where the mobile app can access it via an API. 
 
 
@@ -136,12 +139,12 @@ Setting up the inference microservice was also reasonably simple, though again, 
 
 ## Creating the inference microservice
 
-## Setting up the model endpoint
+### Setting up the model endpoint
 - From SageMaker Studio, in Training jobs, select your finished training batch.
 - Under Options, select “Create model”. Enter a model name, and choose the IAM role created earlier. Leave everything else alone and click “Create”. If all goes well, you will be in the Models section. 
 - Select your model and choose “Create endpoint”. Give your endpoint a name. In the Endpoint configuration section select “Create a new endpoint configuration” and enter a configuration name, click “Create”. You should now be able to create the endpoint by clicking “Create” (again). It will take a little while for this endpoint to spin up – when it’s done, the status will change to “InService”.
 
-## Giving Lambda permission to access the SageMaker model.
+### Giving Lambda permission to access the SageMaker model.
 - Before creating the Lambda function, you need to set up a new custom IAM role to give Lambda permission to access the model endpoint.
 - For that, go to the IAM console.
 - With AWS service as the trusted entity, choose Lambda, then click “Next: Permissions”.
@@ -150,7 +153,7 @@ Setting up the inference microservice was also reasonably simple, though again, 
 - Click “Next: Review”. Give the new role a name, click “Create”.
 - Now you should have a new role
 
-## Setting up the Lambda function
+### Setting up the Lambda function
 - Navigate to [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html), where you’ll set up a Lambda function to pass data between the model endpoint and the REST API server.
 - In Functions, click “Create function”, select “Author from scratch”, give your lambda function a name, for Runtime select Python 3.8.
 - Under “Choose or create an execution role”, click “Use an existing role”, then select the IAM role you created above. Then click “Create function”.
@@ -159,7 +162,7 @@ Setting up the inference microservice was also reasonably simple, though again, 
 You’ll also need to add an environment variable called ENDPOINT_NAME and set it to the name of your model endpoint. 
 - Click “Save” and now your Lambda is ready to hook up to an API.
 
-## Setting up the REST API
+### Setting up the REST API
 - Navigate to [AWS API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) to create and configure a REST API for your model.
 - Click “Create API”, find “REST API” and click “Build”.
 - Enter an API name and click “Create API”.
