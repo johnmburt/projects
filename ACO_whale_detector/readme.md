@@ -5,7 +5,9 @@
 
 #### Session details
 
-For February’s four session meetup series we’ll be working with long term hydrophone recordings from University of Hawaii's Aloha Cabled Observatory (ACO - http://aco-ssds.soest.hawaii.edu), located at a depth of 4728m off Oahu. The recordings span a year and contain many acoustic events: wave movements, the sound of rain, ship noise, possible bomb noises, geologic activity and whale calls and songs. There is a wide range of project topics to explore: identifying and counting acoustic events such as whale calls, measuring daily or seasonal noise trends, measuring wave hydrodynamics, etc.
+For February’s four session meetup series we worked with long term hydrophone recordings from University of Hawaii's Aloha Cabled Observatory (ACO - http://aco-ssds.soest.hawaii.edu), located at a depth of 4728m off Oahu. The recordings span a year and contain many acoustic events: wave movements, the sound of rain, ship noise, possible bomb noises, geologic activity and whale calls and songs. There is a wide range of project topics to explore: identifying and counting acoustic events such as whale calls, measuring daily or seasonal noise trends, measuring wave hydrodynamics, etc.
+
+For my analysis I chose to develop a humpback whale sone detector. These whales spend their breeding season off the Hawaiian islands are very vocal during that time. For the project, I located and downloaded a library of humpback whale song conducted EDA on the songs to inform my model design. Then I built a CNN based classifier model, trained it, did validation testing and then ran the model on a year's worth of hydrophone recordings. I then analyzed the resulting detection data.
 
 #### Notebooks in this project folder:
 
