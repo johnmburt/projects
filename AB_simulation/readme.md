@@ -10,13 +10,13 @@ My initial solution was to create a simple model that simulates preferences for 
 
 ### Step 1: EDA using real preference data
 
-[EDA notebook](https://github.com/johnmburt/projects/tree/master/AB_simulation/consumer_preference_EDA.ipynb)
+#### [EDA notebook](https://github.com/johnmburt/projects/tree/master/AB_simulation/consumer_preference_EDA.ipynb)
 
 The first thing I realized was that for the model to be realistic, sim-user preferences should be variable, but predictable. So I started thinking in terms of a population of users having an underlying distribution of preferences for each design element on a website. To keep things simple, I would like to assume this is a normal distribution. But is that a valid assumption? To test that I located some food preference data posted on the [Sensometric Society Data Set Repository](http://www.sensometric.org/datasets) and I plotted out the distributions of preferences for two experiments (brown bread, and fried mozarella cheese sticks). What I found there was that yes, preferences tend toward a normal distribution, though it is often slightly bimodal. The bimodality of preferences was interesting and according to one co-author of these studies was due to a polarity effect (think Coke vs Pepsi people). That's very interesting and worth pursuing later, but for my initial model I will go with the main trend of a normal distribution of perferences for each simulated website element.
 
 ### Step 2 the initial model
 
-[Model notebook](https://github.com/johnmburt/projects/tree/master/AB_simulation/consumer_pref_sim_1_vf.ipynb)
+#### [Model notebook](https://github.com/johnmburt/projects/tree/master/AB_simulation/consumer_pref_sim_1_vf.ipynb)
 
 For the first model, I wanted to keep things as simple as possible, while still allowing a reasonably realistic output. To do that I created a simulation of user preferences with these features:
 
