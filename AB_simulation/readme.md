@@ -10,13 +10,13 @@ My initial solution was to create a simple model that simulates preferences for 
 
 ### Step 1: EDA using real preference data
 
-[EDA notebook](consumer_preference_EDA.ipynb)
+[EDA notebook](https://github.com/johnmburt/projects/tree/master/AB_simulation/consumer_preference_EDA.ipynb)
 
 The first thing I realized was that for the model to be realistic, sim-user preferences should be variable, but predictable. So I started thinking in terms of a population of users having an underlying distribution of preferences for each design element on a website. To keep things simple, I would like to assume this is a normal distribution. But is that a valid assumption? To test that I located some food preference data posted on the [Sensometric Society Data Set Repository](http://www.sensometric.org/datasets) and I plotted out the distributions of preferences for two experiments (brown bread, and fried mozarella cheese sticks). What I found there was that yes, preferences tend toward a normal distribution, though it is often slightly bimodal. The bimodality of preferences was interesting and according to one co-author of these studies was due to a polarity effect (think Coke vs Pepsi people). That's very interesting and worth pursuing later, but for my initial model I will go with the main trend of a normal distribution of perferences for each simulated website element.
 
 ### Step 2 the initial model
 
-[Model notebook](consumer_pref_sim_1_vf.ipynb)
+[Model notebook](https://github.com/johnmburt/projects/tree/master/AB_simulation/consumer_pref_sim_1_vf.ipynb)
 
 For the first model, I wanted to keep things as simple as possible, while still allowing a reasonably realistic output. To do that I created a simulation of user preferences with these features:
 
@@ -29,4 +29,13 @@ For the first model, I wanted to keep things as simple as possible, while still 
 - **An importance factor is applied when generating responses.** Only a fraction of a real user's decision to click on a buy button will be due to the website design. I call this factor importance: if the website design is very inflnential, then importance will be higher.
 
 - **Response is calculated using a simple threshold.** The dependent variable for the model is conversion. If the final score is higher than the defined response threshold, then the result will be yes (conversion), otherwise no.
+
+### Step 3 build a website to host the model
+The goal is to deploy this model to a web server. The first task will be to create a microservice with an API to allow users to interact via a script, say a Python script in a Jupyter notebook, and submit site configurations and receive sample data indicating whether a sim-user converted or not. Next, I plan to build a nice GUI so that an administrator can log on and create their own custom simulation scenario and testers can log on and submit experiments via a graphic interface. 
+
+
+### Step 4 improve the model
+A couple of colleagues have built a similar user simulation for a gaming platform, except they implemented an agent based model where users are code objects that interact with the simulated environment and can change behavior, etc. This allows a much more sophisticated and realistic simulation. For example, with user agents you can easily code interaction effects, polarizing preferences and even simulate the effect of influence - changing preferences as a result of experimental manipulation. Fun stuff, but for now, I want to get the simple model up and running so that people can test it out and give me feedback. 
+
+
 
